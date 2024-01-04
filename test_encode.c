@@ -1,6 +1,6 @@
 /* Documentation
-Name : Sandeep Kumar c
-Date : March 13 2022
+Name : Dharmaraja Pazhani
+Date : Jan 03 2023
 Description : Steganography
 Sample Execution :
 1. For Encoding

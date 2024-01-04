@@ -1,0 +1,69 @@
+
+compile the project code procedure on visual studio code editor.
+make sure build task file should have the specified configuration(task.json).
+
+		{
+			"type": "cppbuild",
+			"label": "DHARMA -- C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${workspaceFolder}/*.c",
+				"${workspaceFolder}/*.h",
+				"-o",
+				"${workspaceFolder}/a.out"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/gcc"
+		}
+
+
+Open the project , click on terminal-> Run a build task.
+
+
+=======================================================================================
+
+encode the data execution command.
+
+
+dharma@dharma-Vostro-3446:~/Downloads/ES/tmp_dir$ ./a.out -e beautiful.bmp secret.txt stego.bmp
+Selected encoding
+Read and validate encode arguments is a success
+<------Started Encoding------>
+Open files is a success
+width = 1024
+height = 768
+Check capacity is a success
+Copied bmp header successfully
+Encoded magic string successfully
+Encoded secret file extn size
+Encoded secret file extn
+Encoded secret file size
+Encoded secret file data
+Copied remaining data
+<--------Completed encoding-------->
+
+
+
+=======================================================================================
+
+decode the data execution command.
+
+dharma@dharma-Vostro-3446:~/Downloads/ES/tmp_dir$ ./a.out -d stego.bmp decode.txt
+Selected decoding
+Read and validate decode arguments is a success
+<------Started Decoding------>
+Open files is a success
+Decoded magic string Successfully
+Decoded file extension size Succesfully
+Decoded Secret File Extension Succesfully
+Decoded secret file size Successfully
+Decoded secret file data Succuessfully
+<---------Completed decoding--------->
